@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <script defer src="javascript1.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: sans-serif;
+        }
+        section{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width:100%;
+            background:url('food/images\ \(15\).jpg')no-repeat;
+           background-position: center;
+           background-size:cover;
+        }
+        .form_box{
+            position:relative;
+            width:400px;
+            height: 450px;
+            background:transparent;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        h2{
+            font-size:2em;
+            color:#fff;
+            text-align: center;
+
+        } 
+        input:focus ~ lable,
+        input:valid ~ lable{
+             top:-5px
+        }    
+        .inputbox{
+            position:relative;
+            margin:30px 0;
+            width:310px;
+            border-bottom: 2px solid #fff;
+
+        }
+        .inputbox lable{
+            position:absolute;
+            top:50%;
+            left:5px;
+            transform:translateY(-50%);
+            color:black;
+            font-size:1em;
+            pointer-events: none;
+        font-weight: bold;
+        }
+        .inputbox input{
+            width:100%;
+            height:50px;
+            background: transparent;
+            border:none;
+            outline:none;
+            font-size:1em;
+            padding: 0 35px 0 5px;
+        }
+        .forget{
+            margin:-15px 0 15px;
+            font-size: 0.9em;
+            color:black;
+            display:flex;
+            justify-content: center;
+
+
+        }
+        .forget lable input{
+          margin-right: 3px;
+        }
+        .forget a{
+            color:black;
+            text-decoration: none;
+            padding:0px 10px;
+        }
+        .forget a:hover{
+            text-decoration: underline;
+        }
+        button{
+            width:100%;
+            height: 40px;
+            border-radius:40px;
+            background:#fff;
+            border:none;
+            outline:none;
+            cursor:pointer;
+            font-size: 1em;font-weight: 600;
+        }
+        .register{
+            font-size:.9em;
+            color:black;
+            text-align: center;
+            margin:25px 0 10px;
+        }
+        .register a{
+            text-decoration: none;
+            color:black;
+            font-weight: 600;
+            padding:10px 10px;
+
+        }
+        .register p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function validate(){
+           if(document.getElementById("email").value==""){
+             alert("please enter email");
+             return false;
+           }
+           if(document.getElementById("password").value==""){
+             alert("please enter password");
+             return false;
+           }
+           else{
+               alet("successfull")
+           }
+        }
+   </script>
+    <section>
+        <div class="form_box">
+            <div class="form_value">
+                <form ation="">
+                    <h2>Log in</h2>
+                    <div class="inputbox">
+                         <input id="email" type="email" >
+                        <lable for="Email">Email</lable>
+                    </div>
+                    <div class="inputbox">
+                        <input id="password" type="password">
+                       <lable for="">Password</lable>
+                   </div>
+                   <div class="forget">
+                        <lable for=""><input type="checkbox">Remember Me</lable>
+                        <a href="#">forget password</a>
+                   </div>
+                   <button type="submit" onclick="validate()">Log in</button>
+                   <div class="register">
+                       <p>Don't have an account?<a href="#">register</a></p>
+                   </div>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
